@@ -4,13 +4,13 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Quadruple<F, S, T, U> {
-    public final F first;
-    public final S second;
-    public final T third;
-    public final U forth;
+public class Quadruple<Q, R, S, T> {
+    public final Q first;
+    public final R second;
+    public final S third;
+    public final T forth;
 
-    public Quadruple(F first, S second, T third, U forth) {
+    public Quadruple(Q first, R second, S third, T forth) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -23,7 +23,10 @@ public class Quadruple<F, S, T, U> {
             return false;
         }
         Quadruple<?, ?, ?, ?> p = (Quadruple<?, ?, ?, ?>) o;
-        return objectsEqual(p.first, first) && objectsEqual(p.second, second) && objectsEqual(p.third, third) && objectsEqual(p.forth, forth);
+        return objectsEqual(p.first, first) &&
+                objectsEqual(p.second, second) &&
+                objectsEqual(p.third, third) &&
+                objectsEqual(p.forth, forth);
     }
 
     private static boolean objectsEqual(Object a, Object b) {

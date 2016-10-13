@@ -4,14 +4,14 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Quintuple<F, S, T, U, V> {
-    public final F first;
-    public final S second;
-    public final T third;
-    public final U forth;
-    public final V fifth;
+public class Quintuple<Q, R, S, T, U> {
+    public final Q first;
+    public final R second;
+    public final S third;
+    public final T forth;
+    public final U fifth;
 
-    public Quintuple(F first, S second, T third, U forth, V fifth) {
+    public Quintuple(Q first, R second, S third, T forth, U fifth) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -25,7 +25,11 @@ public class Quintuple<F, S, T, U, V> {
             return false;
         }
         Quintuple<?, ?, ?, ?, ?> p = (Quintuple<?, ?, ?, ?, ?>) o;
-        return objectsEqual(p.first, first) && objectsEqual(p.second, second) && objectsEqual(p.third, third) && objectsEqual(p.forth, forth) && objectsEqual(p.fifth, fifth);
+        return objectsEqual(p.first, first) &&
+                objectsEqual(p.second, second) &&
+                objectsEqual(p.third, third) &&
+                objectsEqual(p.forth, forth) &&
+                objectsEqual(p.fifth, fifth);
     }
 
     private static boolean objectsEqual(Object a, Object b) {

@@ -4,15 +4,15 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Sextuple<F, S, T, U, V, W> {
-    public final F first;
-    public final S second;
-    public final T third;
-    public final U forth;
-    public final V fifth;
-    public final W sixth;
+public class Sextuple<Q, R, S, T, U, V> {
+    public final Q first;
+    public final R second;
+    public final S third;
+    public final T forth;
+    public final U fifth;
+    public final V sixth;
 
-    public Sextuple(F first, S second, T third, U forth, V fifth, W sixth) {
+    public Sextuple(Q first, R second, S third, T forth, U fifth, V sixth) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -27,7 +27,12 @@ public class Sextuple<F, S, T, U, V, W> {
             return false;
         }
         Sextuple<?, ?, ?, ?, ?, ?> p = (Sextuple<?, ?, ?, ?, ?, ?>) o;
-        return objectsEqual(p.first, first) && objectsEqual(p.second, second) && objectsEqual(p.third, third) && objectsEqual(p.forth, forth) && objectsEqual(p.fifth, fifth) && objectsEqual(p.sixth, sixth);
+        return objectsEqual(p.first, first) &&
+                objectsEqual(p.second, second) &&
+                objectsEqual(p.third, third) &&
+                objectsEqual(p.forth, forth) &&
+                objectsEqual(p.fifth, fifth) &&
+                objectsEqual(p.sixth, sixth);
     }
 
     private static boolean objectsEqual(Object a, Object b) {

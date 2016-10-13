@@ -4,12 +4,12 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Triple<F, S, T> {
-    public final F first;
-    public final S second;
-    public final T third;
+public class Triple<Q, R, S> {
+    public final Q first;
+    public final R second;
+    public final S third;
 
-    public Triple(F first, S second, T third) {
+    public Triple(Q first, R second, S third) {
         this.first = first;
         this.second = second;
         this.third = third;
@@ -21,7 +21,9 @@ public class Triple<F, S, T> {
             return false;
         }
         Triple<?, ?, ?> p = (Triple<?, ?, ?>) o;
-        return objectsEqual(p.first, first) && objectsEqual(p.second, second) && objectsEqual(p.third, third);
+        return objectsEqual(p.first, first) &&
+                objectsEqual(p.second, second) &&
+                objectsEqual(p.third, third);
     }
 
     private static boolean objectsEqual(Object a, Object b) {
