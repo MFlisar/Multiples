@@ -1,6 +1,6 @@
 # Multiples
 
-### Minimalist set of classes that offers you to group a set of variables in a type safe way like java `Pair` does it with two variables
+##### Minimalist set of classes that offers you to group a set of variables in a type safe way like java `Pair` does it with two variables
 
 Based one Java `Pair` this library offers following classes:
 
