@@ -1,5 +1,8 @@
 # Multiples
-Based one Java `Pair` this library offers 
+
+### Minimalist set of classes that offers you to group a set of variables in a type safe way like java `Pair` does it with two variables
+
+Based one Java `Pair` this library offers following classes:
 
 * Triples (3 items)
 * Quadriples (4 items)
