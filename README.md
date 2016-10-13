@@ -12,6 +12,6 @@ repositories {
 2. add the compile statement to your module's `build.gradle`:
 ```groovy
 dependencies {
-    compile 'com.github.MFlisar:Multiples:0.1'
+    compile 'com.github.MFlisar:Multiples:1.0'
 }
 ```
