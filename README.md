@@ -1,5 +1,14 @@
 # Multiples
-Based one Java Pair this library offers Triples, Quadriples and more (3 to 10 items)
+Based one Java `Pair` this library offers 
+
+* Triples (3 items)
+* Quadriples (4 items)
+* Quintuple (5 items)
+* Sextuple (6 items)
+* Septuple (7 items)
+* Octuple (8 items)
+* Nonuple (9 items)
+* Decuple (10 items)
 
 ### Gradle (via [JitPack.io](https://jitpack.io/))
 
