@@ -4,7 +4,7 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Octuple<Q, R, S, T, U, V, W, X> {
+public class Octuple<Q, R, S, T, U, V, W, X> extends Tuple {
     public final Q first;
     public final R second;
     public final S third;
@@ -39,10 +39,6 @@ public class Octuple<Q, R, S, T, U, V, W, X> {
                 objectsEqual(p.sixth, sixth) &&
                 objectsEqual(p.seventh, seventh) &&
                 objectsEqual(p.eigth, eigth);
-    }
-
-    private static boolean objectsEqual(Object a, Object b) {
-        return a == b || (a != null && a.equals(b));
     }
 
     @Override

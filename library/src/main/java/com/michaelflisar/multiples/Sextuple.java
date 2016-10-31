@@ -4,7 +4,7 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Sextuple<Q, R, S, T, U, V> {
+public class Sextuple<Q, R, S, T, U, V> extends Tuple {
     public final Q first;
     public final R second;
     public final S third;
@@ -33,10 +33,6 @@ public class Sextuple<Q, R, S, T, U, V> {
                 objectsEqual(p.forth, forth) &&
                 objectsEqual(p.fifth, fifth) &&
                 objectsEqual(p.sixth, sixth);
-    }
-
-    private static boolean objectsEqual(Object a, Object b) {
-        return a == b || (a != null && a.equals(b));
     }
 
     @Override

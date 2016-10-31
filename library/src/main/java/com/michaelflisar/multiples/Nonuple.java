@@ -4,7 +4,7 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Nonuple<Q, R, S, T, U, V, W, X, Y> {
+public class Nonuple<Q, R, S, T, U, V, W, X, Y> extends Tuple {
     public final Q first;
     public final R second;
     public final S third;
@@ -42,10 +42,6 @@ public class Nonuple<Q, R, S, T, U, V, W, X, Y> {
                 objectsEqual(p.seventh, seventh) &&
                 objectsEqual(p.eigth, eigth) &&
                 objectsEqual(p.ninth, ninth);
-    }
-
-    private static boolean objectsEqual(Object a, Object b) {
-        return a == b || (a != null && a.equals(b));
     }
 
     @Override

@@ -4,7 +4,7 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Decuple<Q, R, S, T, U, V, W, X, Y, Z> {
+public class Decuple<Q, R, S, T, U, V, W, X, Y, Z> extends Tuple {
     public final Q first;
     public final R second;
     public final S third;
@@ -45,10 +45,6 @@ public class Decuple<Q, R, S, T, U, V, W, X, Y, Z> {
                 objectsEqual(p.eigth, eigth) &&
                 objectsEqual(p.ninth, ninth) &&
                 objectsEqual(p.tenth, tenth);
-    }
-
-    private static boolean objectsEqual(Object a, Object b) {
-        return a == b || (a != null && a.equals(b));
     }
 
     @Override
