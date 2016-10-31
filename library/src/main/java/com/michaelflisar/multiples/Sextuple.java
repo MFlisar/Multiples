@@ -8,15 +8,15 @@ public class Sextuple<Q, R, S, T, U, V> {
     public final Q first;
     public final R second;
     public final S third;
-    public final T forth;
+    public final T fourth;
     public final U fifth;
     public final V sixth;
 
-    public Sextuple(Q first, R second, S third, T forth, U fifth, V sixth) {
+    public Sextuple(Q first, R second, S third, T fourth, U fifth, V sixth) {
         this.first = first;
         this.second = second;
         this.third = third;
-        this.forth = forth;
+        this.fourth = fourth;
         this.fifth = fifth;
         this.sixth = sixth;
     }
@@ -30,7 +30,7 @@ public class Sextuple<Q, R, S, T, U, V> {
         return objectsEqual(p.first, first) &&
                 objectsEqual(p.second, second) &&
                 objectsEqual(p.third, third) &&
-                objectsEqual(p.forth, forth) &&
+                objectsEqual(p.fourth, fourth) &&
                 objectsEqual(p.fifth, fifth) &&
                 objectsEqual(p.sixth, sixth);
     }
@@ -44,7 +44,7 @@ public class Sextuple<Q, R, S, T, U, V> {
         return (first == null ? 0 : first.hashCode()) ^
                 (second == null ? 0 : second.hashCode()) ^
                 (third == null ? 0 : third.hashCode()) ^
-                (forth == null ? 0 : forth.hashCode()) ^
+                (fourth == null ? 0 : fourth.hashCode()) ^
                 (fifth == null ? 0 : fifth.hashCode()) ^
                 (sixth == null ? 0 : sixth.hashCode());
     }
