@@ -4,7 +4,7 @@ package com.michaelflisar.multiples;
  * Created by flisar on 13.10.2016.
  */
 
-public class Quadruple<Q, R, S, T> {
+public class Quadruple<Q, R, S, T> extends Tuple {
     public final Q first;
     public final R second;
     public final S third;
@@ -27,10 +27,6 @@ public class Quadruple<Q, R, S, T> {
                 objectsEqual(p.second, second) &&
                 objectsEqual(p.third, third) &&
                 objectsEqual(p.fourth, fourth);
-    }
-
-    private static boolean objectsEqual(Object a, Object b) {
-        return a == b || (a != null && a.equals(b));
     }
 
     @Override
