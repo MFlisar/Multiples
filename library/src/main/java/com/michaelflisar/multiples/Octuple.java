@@ -8,21 +8,21 @@ public class Octuple<Q, R, S, T, U, V, W, X> {
     public final Q first;
     public final R second;
     public final S third;
-    public final T forth;
+    public final T fourth;
     public final U fifth;
     public final V sixth;
     public final W seventh;
-    public final X eigth;
+    public final X eighth;
 
-    public Octuple(Q first, R second, S third, T forth, U fifth, V sixth, W seventh, X eigth) {
+    public Octuple(Q first, R second, S third, T fourth, U fifth, V sixth, W seventh, X eighth) {
         this.first = first;
         this.second = second;
         this.third = third;
-        this.forth = forth;
+        this.fourth = fourth;
         this.fifth = fifth;
         this.sixth = sixth;
         this.seventh = seventh;
-        this.eigth = eigth;
+        this.eighth = eighth;
     }
 
     @Override
@@ -34,11 +34,11 @@ public class Octuple<Q, R, S, T, U, V, W, X> {
         return objectsEqual(p.first, first) &&
                 objectsEqual(p.second, second) &&
                 objectsEqual(p.third, third) &&
-                objectsEqual(p.forth, forth) &&
+                objectsEqual(p.fourth, fourth) &&
                 objectsEqual(p.fifth, fifth) &&
                 objectsEqual(p.sixth, sixth) &&
                 objectsEqual(p.seventh, seventh) &&
-                objectsEqual(p.eigth, eigth);
+                objectsEqual(p.eighth, eighth);
     }
 
     private static boolean objectsEqual(Object a, Object b) {
@@ -50,11 +50,11 @@ public class Octuple<Q, R, S, T, U, V, W, X> {
         return (first == null ? 0 : first.hashCode()) ^
                 (second == null ? 0 : second.hashCode()) ^
                 (third == null ? 0 : third.hashCode()) ^
-                (forth == null ? 0 : forth.hashCode()) ^
+                (fourth == null ? 0 : fourth.hashCode()) ^
                 (fifth == null ? 0 : fifth.hashCode()) ^
                 (sixth == null ? 0 : sixth.hashCode()) ^
                 (seventh == null ? 0 : seventh.hashCode()) ^
-                (eigth == null ? 0 : eigth.hashCode());
+                (eighth == null ? 0 : eighth.hashCode());
     }
 
     public static <A, B, C, D, E, F, G, H> Octuple<A, B, C, D, E, F, G, H> create(A a, B b, C c, D d, E e, F f, G g, H h) {

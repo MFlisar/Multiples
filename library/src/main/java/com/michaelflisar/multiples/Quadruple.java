@@ -8,13 +8,13 @@ public class Quadruple<Q, R, S, T> {
     public final Q first;
     public final R second;
     public final S third;
-    public final T forth;
+    public final T fourth;
 
-    public Quadruple(Q first, R second, S third, T forth) {
+    public Quadruple(Q first, R second, S third, T fourth) {
         this.first = first;
         this.second = second;
         this.third = third;
-        this.forth = forth;
+        this.fourth = fourth;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Quadruple<Q, R, S, T> {
         return objectsEqual(p.first, first) &&
                 objectsEqual(p.second, second) &&
                 objectsEqual(p.third, third) &&
-                objectsEqual(p.forth, forth);
+                objectsEqual(p.fourth, fourth);
     }
 
     private static boolean objectsEqual(Object a, Object b) {
@@ -38,7 +38,7 @@ public class Quadruple<Q, R, S, T> {
         return (first == null ? 0 : first.hashCode()) ^
                 (second == null ? 0 : second.hashCode()) ^
                 (third == null ? 0 : third.hashCode()) ^
-                (forth == null ? 0 : forth.hashCode());
+                (fourth == null ? 0 : fourth.hashCode());
     }
 
     public static <A, B, C, D> Quadruple<A, B, C, D> create(A a, B b, C c, D d) {
