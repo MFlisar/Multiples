@@ -24,29 +24,15 @@ public class Septuple<Q, R, S, T, U, V, W> extends Tuple {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Septuple)) {
-            return false;
-        }
-        Septuple<?, ?, ?, ?, ?, ?, ?> p = (Septuple<?, ?, ?, ?, ?, ?, ?>) o;
-        return objectsEqual(p.first, first) &&
-                objectsEqual(p.second, second) &&
-                objectsEqual(p.third, third) &&
-                objectsEqual(p.fourth, fourth) &&
-                objectsEqual(p.fifth, fifth) &&
-                objectsEqual(p.sixth, sixth) &&
-                objectsEqual(p.seventh, seventh);
+    protected final Object[] getAllValues()
+    {
+        return new Object[]{first, second, third, fourth, fifth, sixth, seventh};
     }
 
     @Override
-    public int hashCode() {
-        return (first == null ? 0 : first.hashCode()) ^
-                (second == null ? 0 : second.hashCode()) ^
-                (third == null ? 0 : third.hashCode()) ^
-                (fourth == null ? 0 : fourth.hashCode()) ^
-                (fifth == null ? 0 : fifth.hashCode()) ^
-                (sixth == null ? 0 : sixth.hashCode()) ^
-                (seventh == null ? 0 : seventh.hashCode());
+    protected final int getValueCount()
+    {
+        return 7;
     }
 
     public static <A, B, C, D, E, F, G> Septuple<A, B, C, D, E, F, G> create(A a, B b, C c, D d, E e, F f, G g) {

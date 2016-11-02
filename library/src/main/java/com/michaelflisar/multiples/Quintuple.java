@@ -20,25 +20,15 @@ public class Quintuple<Q, R, S, T, U> extends Tuple {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Quintuple)) {
-            return false;
-        }
-        Quintuple<?, ?, ?, ?, ?> p = (Quintuple<?, ?, ?, ?, ?>) o;
-        return objectsEqual(p.first, first) &&
-                objectsEqual(p.second, second) &&
-                objectsEqual(p.third, third) &&
-                objectsEqual(p.fourth, fourth) &&
-                objectsEqual(p.fifth, fifth);
+    protected final Object[] getAllValues()
+    {
+        return new Object[]{first, second, third, fourth, fifth};
     }
 
     @Override
-    public int hashCode() {
-        return (first == null ? 0 : first.hashCode()) ^
-                (second == null ? 0 : second.hashCode()) ^
-                (third == null ? 0 : third.hashCode()) ^
-                (fourth == null ? 0 : fourth.hashCode()) ^
-                (fifth == null ? 0 : fifth.hashCode());
+    protected final int getValueCount()
+    {
+        return 5;
     }
 
     public static <A, B, C, D, E> Quintuple<A, B, C, D, E> create(A a, B b, C c, D d, E e) {

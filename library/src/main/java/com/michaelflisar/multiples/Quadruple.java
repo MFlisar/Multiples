@@ -18,23 +18,15 @@ public class Quadruple<Q, R, S, T> extends Tuple {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Quadruple)) {
-            return false;
-        }
-        Quadruple<?, ?, ?, ?> p = (Quadruple<?, ?, ?, ?>) o;
-        return objectsEqual(p.first, first) &&
-                objectsEqual(p.second, second) &&
-                objectsEqual(p.third, third) &&
-                objectsEqual(p.fourth, fourth);
+    protected final Object[] getAllValues()
+    {
+        return new Object[]{first, second, third, fourth};
     }
 
     @Override
-    public int hashCode() {
-        return (first == null ? 0 : first.hashCode()) ^
-                (second == null ? 0 : second.hashCode()) ^
-                (third == null ? 0 : third.hashCode()) ^
-                (fourth == null ? 0 : fourth.hashCode());
+    protected final int getValueCount()
+    {
+        return 4;
     }
 
     public static <A, B, C, D> Quadruple<A, B, C, D> create(A a, B b, C c, D d) {
