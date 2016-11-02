@@ -1,4 +1,4 @@
-# Multiples
+# Multiples [![Release](https://jitpack.io/v/MFlisar/Multiples.svg)](https://jitpack.io/#MFlisar/Multiples)
 
 ##### Minimalist set of classes that offers you to group a set of variables in a type safe way like java `Pair` does it with two variables
 
